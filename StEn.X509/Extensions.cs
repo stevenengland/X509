@@ -26,7 +26,7 @@
         public static void SetPinForPrivateKey(this X509Certificate2 certificate, string pin)
         {
             if (certificate == null)
-                throw new ArgumentNullException(nameof(certificate));
+                throw new ArgumentNullException("certificate");
             var key = (RSACryptoServiceProvider)certificate.PrivateKey;
 
             var providerHandle = IntPtr.Zero;
